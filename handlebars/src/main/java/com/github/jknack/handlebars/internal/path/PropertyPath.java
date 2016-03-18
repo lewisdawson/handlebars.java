@@ -61,4 +61,9 @@ public class PropertyPath implements PathExpression {
   public String toString() {
     return name;
   }
+
+  @Override
+  public String getName() {
+    return toString();
+  }
 }

@@ -50,4 +50,8 @@ public class ResolveParentPath implements PathExpression {
     return "..";
   }
 
+  @Override
+  public String getName() {
+    return toString();
+  }
 }

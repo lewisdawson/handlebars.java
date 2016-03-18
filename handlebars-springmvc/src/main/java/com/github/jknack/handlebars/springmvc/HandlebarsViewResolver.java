@@ -332,6 +332,10 @@ public class HandlebarsViewResolver extends AbstractTemplateViewResolver
         "At least one value-resolver must be present.");
   }
 
+  public ValueResolver[] getValueResolvers() {
+    return valueResolvers;
+  }
+
   /**
    * Set variable formatters.
    *

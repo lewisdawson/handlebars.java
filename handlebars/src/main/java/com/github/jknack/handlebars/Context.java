@@ -28,6 +28,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import com.github.jknack.handlebars.internal.PathExpressionList;
 import com.github.jknack.handlebars.internal.path.ThisPath;
 import com.github.jknack.handlebars.io.TemplateSource;
 
@@ -447,6 +448,26 @@ public class Context {
    */
   public Context data(final String name, final Object value) {
     data.put(name, value);
+    return this;
+  }
+
+  public Context data(final List<PathExpression> path, final Object value) {
+    if(path != null && !path.isEmpty()) {
+      Context currentContext = this;
+      Object currentPathObject;
+
+      for(PathExpression pathExpression : path) {
+        PathExpressionList currentLevelPath = new PathExpressionList(pathExpression.getName());
+        currentPathObject = get(currentLevelPath);
+
+        // If the path object doesn't exist, create it
+        if(currentPathObject == null) {
+//          data(pathExpression.getName(), )
+        }
+
+      }
+    }
+
     return this;
   }
 

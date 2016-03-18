@@ -57,4 +57,8 @@ public class ThisPath implements PathExpression {
     return name;
   }
 
+  @Override
+  public String getName() {
+    return toString();
+  }
 }

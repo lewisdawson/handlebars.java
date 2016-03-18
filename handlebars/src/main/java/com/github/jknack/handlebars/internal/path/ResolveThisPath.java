@@ -45,5 +45,8 @@ public class ResolveThisPath extends ThisPath {
     return value == null ? data : value;
   }
 
-
+  @Override
+  public String getName() {
+    return super.getName();
+  }
 }

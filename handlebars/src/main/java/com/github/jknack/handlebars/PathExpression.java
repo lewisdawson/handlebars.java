@@ -70,4 +70,9 @@ public interface PathExpression {
    *         etc...
    */
   boolean local();
+
+  /**
+   * @return The named representation of the path expression.
+   */
+  String getName();
 }

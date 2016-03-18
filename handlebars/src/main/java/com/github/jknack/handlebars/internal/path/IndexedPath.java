@@ -84,4 +84,9 @@ public class IndexedPath implements PathExpression {
   public String toString() {
     return "[" + idx + "]";
   }
+
+  @Override
+  public String getName() {
+    return toString();
+  }
 }
